@@ -160,7 +160,7 @@ app.add_exception_handler(UpstreamError, upstream_error_handler)
 DASHBOARD_URL = os.environ.get("DASHBOARD_URL", "http://localhost:3000")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[DASHBOARD_URL],
+    allow_origins=[DASHBOARD_URL, "https://mem0.b7co.cloud"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
